@@ -1,2 +1,2 @@
-# Solo-Project---Minced
-Digital cookbook to answer 'What's for dinner?'
+# Solo-Project---Spritzed
+Digital cocktail book for all your holiday drink needs.
