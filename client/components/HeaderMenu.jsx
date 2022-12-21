@@ -11,12 +11,12 @@ const HeaderMenu = props => {
     <div className='header'>
 
       <section className='headerRight'>
-
+        <a href="recipe/create">
         <button>
         <IoIosAddCircleOutline/>
         <h4>Add New</h4>
         </button>
-
+        </a>
       </section>
       <section className='headerLeft'>
       </section>

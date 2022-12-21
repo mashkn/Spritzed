@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(cookieParser());
 
 // statically serve everything in the build folder on the route '/build'
-// app.use('/build', express.static(path.join(__dirname, '../build')));
+app.use('/build', express.static(path.join(__dirname, '../build')));
 
 // serve index.html on the route '/'
 app.get('/', (req, res) => {
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/home', (req, res) => {
-  return res.status(200).sendFile(path.join(__dirname, '../index.html'));
+  return res.status(200).sendFile(path.resolve('index.html'));
 });
 
 app.get('/login', (req, res) => {
@@ -31,9 +31,9 @@ app.get('/login', (req, res) => {
 
 //Accessing the form
 
-// app.get('/recipe/create',(req, res) => {
-//   return res.status(200).sendFile(path.join(__dirname, '../client/frontend/recipeForm.html'));
-// });
+app.get('/recipe/create',(req, res) => {
+  return res.status(200).sendFile(path.resolve('client/frontend/recipeForm.html'));
+});
 
 //Creating the recipe
 

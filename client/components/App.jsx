@@ -9,6 +9,7 @@ const App = (props) => {
 
     return (
       <div className = "App">
+        Im getting here
         {/* <HeaderMenu/> */}
         <HeaderMenu/>
         <MainContainer/>

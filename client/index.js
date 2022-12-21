@@ -6,8 +6,8 @@ import { Router } from 'react-router-dom';
 import styles from './scss/application.scss';
 
 render(
-  
+
     <App />
-  ,
+,
   document.getElementById('root')
 );
