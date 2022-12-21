@@ -6,9 +6,10 @@ module.exports = {
     entry: path.resolve(__dirname,'client/index.js'),
     output: {
         path: path.resolve(__dirname,'build'),
+        publicPath: '/',
         filename: 'bundle.js',
       },
-    //    mode: 'development',
+       mode: 'development',
     module:{
         rules: [
             {
@@ -23,6 +24,17 @@ module.exports = {
             },
             {
                 test: /\.s[ac]ss$/i,
+                use: [
+                  // Creates `style` nodes from JS strings
+                  'style-loader',
+                  // Translates CSS into CommonJS
+                  'css-loader',
+                  // Compiles Sass to CSS
+                  'sass-loader',
+                ],
+              },
+              {
+                test: /\.[ac]ss$/i,
                 use: [
                   // Creates `style` nodes from JS strings
                   'style-loader',
