@@ -5,17 +5,17 @@ import React from 'react';
 import RecipeContainer from './RecipeContainer.jsx';
 import FeaturedRecipes from '../components/FeaturedRecipes.jsx';
 import SearchBox from '../components/SearchBox.jsx';
-import Footer from '../components/Footer.jsx';
 
 const MainContainer = props => {
   return (
   <div className="innerBody">
-    <div className="outerBox">
+    <div className="welcomeText">
+      <h3>Welcome to the cocktail place!</h3>
       <SearchBox/>
+      </div>
       <FeaturedRecipes />
       <RecipeContainer />
-      <Footer/>
-    </div>
+    
   </div>
   )
 }

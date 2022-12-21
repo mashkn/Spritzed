@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const recipeSchema = new Schema({
     name: {type: String, required: true, unique: true},
-    image: {type: Image},
+    image: {type: String},
 
     ingredient1: {type: String, required: true},
     measure1: {type: String, required: true},
