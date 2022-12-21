@@ -1,3 +1,134 @@
 body {
-    background: rgb(176, 169, 154);
+
+  box-sizing:border-box;
+  background: $lightBeige;
+  color: $darkBeige;
+  font: 1rem arial sans-serif;
+  overflow-y: scroll;
+};
+
+.header {
+  position: fixed;
+  z-index: 4;
+  box-shadow: 0 0 15px $darkBeige;
+  left: 0;
+  right:0;
+  top: 0;
+  bottom:0;
+  height: 6rem;
+  background-color: darken($lightBeige, 10%);
+  .headerRight {
+    top: 5%;
+    right: 1rem;
+    position: relative;
+    padding: 1.5%;
+    font-size: 30px;
+    text-align: right;
+    button{
+      font-size: 30px;
+      background-color: transparent;
+      border: none;
+    h4 {
+      font: 15px Copperplate, Papyrus, fantasy;
+    };
+  };
+};
+};
+
+button:active {
+  color: lighten($darkBeige, 20%);
+};
+
+.innerBody {
+  top: 6.5rem;
+  position: relative;
+  margin: 0% 5%;
+  font-family: Georgia,Times,Times New Roman,serif;
+}
+
+.RecipeContainer {
+  top: 8rem;
+  margin: 4rem 0rem;
+  height: 40%;
+};
+
+.RecipeBox {
+  min-height: 20rem;
+  
+  overflow: hidden;
+  img {
+    position: absolute;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  };
+  .overFlow {
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0), rgba(24, 9, 9, 0.733));
+    border-radius: 1rem;
   }
+  p {
+    position: absolute;
+    z-index:10;
+    left:50%;
+    bottom: 0%;
+    transform: translate(-50%, 0%);
+    font: small-caps 24px Copperplate, Papyrus, fantasy;
+    letter-spacing: 2px;
+    color: $lightBeige;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  };
+};
+
+.icons {
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 2rem 0rem;
+  text-transform: uppercase;
+  font: 10px Copperplate, Papyrus, fantasy;
+};
+.icon {
+  width: 90px;
+  height: 60px;
+  margin: 10px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.5;
+  h4 {
+    font-size: 10px;
+  }
+}
+
+.footer {
+  position: relative;
+  top: 5rem;
+  padding: 2px;
+  left: -5rem;
+  bottom: 0;
+  width: 120%;
+  height: 8rem;
+  background-color: $darkBeige;
+  color: white;
+  text-align: center;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  margin: 5px;
+}
