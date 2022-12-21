@@ -17,23 +17,37 @@ body {
   bottom:0;
   height: 6rem;
   background-color: darken($lightBeige, 10%);
+  button{
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    margin: 0 15px;
+  h4 {
+    font: 10px Copperplate, Papyrus, fantasy;
+  };
+  };
   .headerRight {
-    top: 5%;
+    top: 1rem;
     right: 1rem;
-    position: relative;
+    position: fixed;
     padding: 1.5%;
     font-size: 30px;
     text-align: right;
-    button{
-      font-size: 30px;
-      background-color: transparent;
-      border: none;
-    h4 {
-      font: 15px Copperplate, Papyrus, fantasy;
-    };
-  };
 };
+
+.headerLeft {
+  top: 0.5rem;
+    left: 1rem;
+    position: fixed;
+    padding: 1.5%;
+    font-size: 30px;
+    text-align: left;
+    display: flex;
+    
+}
 };
+
+
 
 button:active {
   color: lighten($darkBeige, 20%);
@@ -91,26 +105,25 @@ button:active {
   };
 };
 
-.icons {
-
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 2rem 0rem;
-  text-transform: uppercase;
-  font: 10px Copperplate, Papyrus, fantasy;
-};
-.icon {
-  width: 90px;
-  height: 60px;
-  margin: 10px;
-  text-align: center;
-  font-size: 30px;
-  line-height: 1.5;
-  h4 {
-    font-size: 10px;
-  }
-}
+// .icons {
+//   display: flex;
+//   justify-content: left;
+//   text-align: center;
+//   margin: 2rem 0rem;
+//   text-transform: uppercase;
+//   font: 10px Copperplate, Papyrus, fantasy;
+// };
+// .icon {
+//   width: 90px;
+//   height: 60px;
+//   margin: 10px;
+//   text-align: center;
+//   font-size: 30px;
+//   line-height: 1.5;
+//   h4 {
+//     font-size: 10px;
+//   }
+// }
 
 .footer {
   position: relative;
@@ -130,4 +143,10 @@ input {
   height: 30px;
   font-size: 20px;
   margin: 5px;
+}
+
+.RecipeForm {
+  top: 6.5rem;
+  position: relative;
+  margin: 0% 5%;
 }

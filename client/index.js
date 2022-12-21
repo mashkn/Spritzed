@@ -4,9 +4,9 @@ import App from './components/App.jsx';
 import { Router } from 'react-router-dom';
 // uncomment so that webpack can bundle styles
 import styles from './scss/application.scss';
-
+console.log('hello index js')
 render(
-
+  
     <App />
 ,
   document.getElementById('root')

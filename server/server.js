@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const mongoose = require('mongoose');
 
 /**
 * Automatically parse urlencoded body content and form data from incoming requests and place it
@@ -9,6 +10,11 @@ const path = require('path');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // app.use(cookieParser());
+//Ko0Zk3A02SNPSNGU
+mongoose.connect('mongodb+srv://mashkn:Ko0Zk3A02SNPSNGU@cluster0.jcmgttt.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connection.once('open', () => {
+  console.log('Connected to Database');
+});
 
 // statically serve everything in the build folder on the route '/build'
 app.use('/build', express.static(path.join(__dirname, '../build')));
@@ -31,14 +37,15 @@ app.get('/login', (req, res) => {
 
 //Accessing the form
 
-app.get('/recipe/create',(req, res) => {
-  return res.status(200).sendFile(path.resolve('client/frontend/recipeForm.html'));
-});
+// app.get('/recipe/create',(req, res) => {
+//   return res.status(200).sendFile(path.join(__dirname, '../client/frontend/recipeForm.html'));
+// });
 
 //Creating the recipe
 
 app.post('/recipe/create', (req, res) => {
-  return res.status(200).sendFile(path.join(__dirname, '../client/frontend/recipeForm.html'));
+  console.log(requested);
+  // return res.status(200).json(req);
 });
 
 app.listen(3000); //listens on port 3000 -> http://localhost:3000/
