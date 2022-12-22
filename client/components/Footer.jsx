@@ -1,5 +1,6 @@
 import React from 'react';
 import { IoIosAddCircleOutline } from 'react-icons/io';
+import footerLogo from '../assets/footerLogo.png';
 
 
 const Footer = props => {
@@ -23,6 +24,7 @@ const Footer = props => {
         <p>Home</p>
       
       </div>
+      <img src={footerLogo} alt="Spritzed Footer Logo"/>
       <div className="footerRight">
       <p id="title">Sign Up</p>
         <p>Options to join</p>

@@ -59,7 +59,7 @@ const RecipeContainer = props => {
 
   return (
     <div className="RecipeContainer">
-      <h1 id="header">Random recipes from the api</h1>
+      <h2 id="header">Cocktails to try </h2>
       <Splide options={{
         perPage:4,
         arrows: false,

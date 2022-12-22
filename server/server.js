@@ -51,7 +51,7 @@ app.get('/login', (req, res) => {
 
 //Creating the recipe
 
-app.post('/recipe/create', recipeController.createRecipe, (req, res) => {
+app.post('/recipes/create', recipeController.createRecipe, (req, res) => {
   // return res.sendStatus(200);
   res.redirect('http://localhost:8080/home')
 });

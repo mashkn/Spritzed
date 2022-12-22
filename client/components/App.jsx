@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RecipeForm from './RecipeForm.jsx';
 import { Navigate } from 'react-router-dom';
 import Footer from './Footer.jsx';
+import AllRecipesContainer from '../containers/AllRecipesContainer.jsx';
 
 const App = (props) => {
 
@@ -17,7 +18,9 @@ const App = (props) => {
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<MainContainer />} />
-          <Route path="/recipe/create" element={<RecipeForm />} />
+          <Route path="/recipes" element={<Navigate to="/recipes/all" />} />
+          <Route path="/recipes/create" element={<RecipeForm />} />
+          <Route path="/recipes/all" element={<AllRecipesContainer/>} />
         </Routes>
       </BrowserRouter>
       <Footer />

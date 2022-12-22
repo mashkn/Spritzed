@@ -24,8 +24,10 @@ const RecipeForm = props => {
 
     return (
         <div className="RecipeForm">
-            Create Recipe
-            <form method='POST' action='http://localhost:3000/recipe/create'>
+            
+            <div className="MainForm">
+            <h2>Create Recipe</h2>
+            <form method='POST' action='http://localhost:3000/recipes/create'>
                 <input name="name" type="text" placeholder="Recipe Name"></input>
                 <input name="image" type="file"></input>
                 <input name="ingredient1" type="text" placeholder="Ingredient"></input>
@@ -33,6 +35,7 @@ const RecipeForm = props => {
                 <input type="submit" value='Submit'/>
                 {/* <button type="submit" onClick={createRecipe}>Create Recipe</button> */}
             </form>
+            </div>
             {/* <button type="submit" onClick={createRecipe}>Create Recipe</button> */}
         </div>
     )

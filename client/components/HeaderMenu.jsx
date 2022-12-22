@@ -5,7 +5,7 @@ import { FaCocktail } from "react-icons/fa";
 import { RiCommunityLine } from "react-icons/ri";
 import { GiSnowBottle, GiPerspectiveDiceSixFacesRandom } from "react-icons/gi";
 import { NavLink } from 'react-router-dom';
-import image1 from '../assets/footerLogo.png';
+import headerLogo from '../assets/headerLogo.png';
 
 const HeaderMenu = props => {
 
@@ -13,12 +13,13 @@ const HeaderMenu = props => {
 
   return (
     <div className='header'>
-      <img src={image1} alt="Spritzed header logo"/>
+      <a href="http://localhost:8080/home"><img id="logo" src={headerLogo} alt="Spritzed header logo" height="90"/></a>
       <section className='headerLeft'>
-        <button className='icon'>
+      <a href="http://localhost:8080/recipes/all"><button className='icon'>
           <FaCocktail />
           <h4>All<br/>Cocktails</h4>
         </button>
+        </a>
         <button className="icon">
           <RiCommunityLine />
           <h4>Community<br/>Additions</h4>
@@ -33,7 +34,7 @@ const HeaderMenu = props => {
         </button>
       </section>
       <section className='headerRight'>
-        <a href="http://localhost:8080/recipe/create">
+        <a href="http://localhost:8080/recipes/create">
           <button>
             <IoIosAddCircleOutline />
             <h4>Add New</h4>
