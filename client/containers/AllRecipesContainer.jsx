@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import RecipeBox from '../components/RecipeBox.jsx';
+
 
 
 const AllRecipesContainer = props => {
@@ -40,7 +40,7 @@ const AllRecipesContainer = props => {
             <div className="recipe">
               
               <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink}></img>
-              <p>{cocktail.strDrink}</p>
+              <p><span>{cocktail.strDrink}</span></p>
               
             </div>
           );

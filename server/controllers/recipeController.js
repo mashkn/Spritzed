@@ -3,7 +3,16 @@ const Recipe = require('../models/recipeModel');
 const recipeController = {};
 
 //recipe access
-recipeController.getAllRecipes = (req, res, next) => {
+recipeController.getAllRecipes =  (req, res, next) => {
+   Recipe.find({}, (err, recipes) => {
+    // if a database error occurs, call next with the error message passed in
+    // for the express global error handler to catch
+    if (err) return next('Error in recipeController.getAllRecipes: ' + JSON.stringify(err));
+    
+    // store retrieved users into res.locals and move on to next middleware
+    res.locals.commRecipes = recipes;
+    return next();
+  });
 };
 
 //recipe creation

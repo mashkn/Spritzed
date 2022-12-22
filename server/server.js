@@ -5,6 +5,23 @@ const mongoose = require('mongoose');
 const recipeController = require('./controllers/recipeController')
 let cors = require('cors')
 
+const allowedOrigins = ["http://localhost:3000", "http://localhost:8080"];
+
+app.use(
+    cors({
+        origin: function(origin, callback) {
+            if (!origin) return callback(null, true);
+            if (allowedOrigins.indexOf(origin) === -1) {
+                var msg =
+                    "The CORS policy for this site does not " +
+                    "allow access from the specified Origin.";
+                return callback(new Error(msg), false);
+            }
+            return callback(null, true);
+        }
+    })
+); 
+
 //Ko0Zk3A02SNPSNGU
 mongoose.connect('mongodb+srv://mashkn:Ko0Zk3A02SNPSNGU@cluster0.jcmgttt.mongodb.net/?retryWrites=true&w=majority');
 mongoose.connection.once('open', () => {
@@ -53,8 +70,16 @@ app.get('/login', (req, res) => {
 
 app.post('/recipes/create', recipeController.createRecipe, (req, res) => {
   // return res.sendStatus(200);
-  res.redirect('http://localhost:8080/home')
+  res.redirect('http://localhost:8080/recipes/community')
 });
+
+//Getting all database recipes
+
+app.get('/recipes/community', recipeController.getAllRecipes, (req, res) => {
+  // return res.sendStatus(200);
+  res.status(200).send(res.locals.commRecipes);
+});
+
 
 // Global error handler
 app.use((err, req, res, next) => {

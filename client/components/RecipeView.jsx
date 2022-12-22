@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
 
-const RecipeForm = props => {
+const RecipeView = props => {
+
     return (
         <div className="RecipeForm">
             
@@ -22,4 +22,4 @@ const RecipeForm = props => {
     )
 };
 
-export default RecipeForm;
+export default RecipeView;

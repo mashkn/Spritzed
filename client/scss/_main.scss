@@ -309,6 +309,7 @@ input {
       flex-wrap: wrap;
     }
     input[type="submit"]{
+      margin-top: 3rem;
       background-color: $darkBeige;
       color:$lightBeige;
     }
@@ -320,33 +321,43 @@ input {
   h2{
     padding-bottom:2rem;
     padding-left:2rem;
-
     width: 100%;
   }
-  padding-top: 10rem;
+  padding-top: 7rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 3rem;
   
+  
     // width: 25%;
     // padding-bottom: 25%;
     // float: left;
     // height: 0;
   .recipe {
+
+    align-items: center;
+    margin-left: 2em;
+    margin-right: 2em;
     flex: 1;
+    min-width: 15rem;
     img {
+      position: relative;
       max-width: 300px;
       border-radius: 1rem;
+      filter: opacity(90%);
+      filter: sepia(10%);
     }
-    
+    img:hover{
+      filter: opacity(70%);
+    }
   }
   
 
   p {
     position: relative;
-    z-index: 10;
+    z-index: 3;
     left: 50%;
     bottom: 15%;
     transform: translate(-50%, 0%);
@@ -358,6 +369,11 @@ input {
     font-weight: 600;
     font-size: 1rem;
     height: 10%;
+  }
+  p span {
+    background-color: darken($darkGrey, 15%);
+    border-radius: 0.3rem;
+    position: relative;
     justify-content: center;
     align-items: center;
   }

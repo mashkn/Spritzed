@@ -8,6 +8,7 @@ module.exports = {
         path: path.resolve(__dirname,'build'),
         publicPath: '/',
         filename: 'bundle.js',
+        asyncChunks: true,
       },
        mode: 'development',
     module:{

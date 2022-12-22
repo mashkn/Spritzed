@@ -8,6 +8,8 @@ import RecipeForm from './RecipeForm.jsx';
 import { Navigate } from 'react-router-dom';
 import Footer from './Footer.jsx';
 import AllRecipesContainer from '../containers/AllRecipesContainer.jsx';
+import CommunityRecipes from '../containers/CommunityRecipes.jsx';
+import RecipeView from './RecipeView.jsx';
 
 const App = (props) => {
 
@@ -21,6 +23,8 @@ const App = (props) => {
           <Route path="/recipes" element={<Navigate to="/recipes/all" />} />
           <Route path="/recipes/create" element={<RecipeForm />} />
           <Route path="/recipes/all" element={<AllRecipesContainer/>} />
+          <Route path="/recipes/community" element={<CommunityRecipes/>} />
+          <Route path="/recipes/view" element={<RecipeView/>} />
         </Routes>
       </BrowserRouter>
       <Footer />

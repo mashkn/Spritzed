@@ -20,10 +20,12 @@ const HeaderMenu = props => {
           <h4>All<br/>Cocktails</h4>
         </button>
         </a>
+        <a href="http://localhost:8080/recipes/community">
         <button className="icon">
           <RiCommunityLine />
           <h4>Community<br/>Additions</h4>
         </button>
+        </a>
         <button className="icon">
           <GiSnowBottle />
           <h4>Christmas<br/>Cocktails</h4>
