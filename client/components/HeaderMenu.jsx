@@ -5,7 +5,7 @@ import { FaCocktail } from "react-icons/fa";
 import { RiCommunityLine } from "react-icons/ri";
 import { GiSnowBottle, GiPerspectiveDiceSixFacesRandom } from "react-icons/gi";
 import { NavLink } from 'react-router-dom';
-
+import image1 from '../assets/footerLogo.png';
 
 const HeaderMenu = props => {
 
@@ -13,6 +13,7 @@ const HeaderMenu = props => {
 
   return (
     <div className='header'>
+      <img src={image1} alt="Spritzed header logo"/>
       <section className='headerLeft'>
         <button className='icon'>
           <FaCocktail />

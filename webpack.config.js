@@ -34,6 +34,13 @@ module.exports = {
                   'sass-loader',
                 ],
               },
+              {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                  'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+                  'image-webpack-loader',
+                ],
+              },
             //   {
             //     test: /\.[ac]ss$/i,
             //     use: [

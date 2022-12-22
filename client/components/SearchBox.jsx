@@ -1,17 +1,14 @@
 import React from 'react';
-// import TextField from "@mui/material/TextField";
+import {CiSearch} from 'react-icons/ci'
 
 
 const SearchBox = props => {
     return (
         <div className="searchBox">
+
             
-            {/* <TextField
-          id="outlined-basic"
-          variant="outlined"
-          fullWidth
-          label="Search"
-        /> */}
+            <input placeholder="I have a cocktail in mind..." /><CiSearch id="icon"/>
+
         </div>
     )
 }
