@@ -61,7 +61,7 @@ const FeaturedRecipes = props => {
         {featuredCocktails.map((cocktail) => {
           return (
             <SplideSlide>
-              <RecipeBox cocktail={cocktail.strDrink} image={cocktail.strDrinkThumb} key={cocktail.idDrink} />
+              <a href={`http://localhost:8080/recipes/view/?recipeId=${cocktail.idDrink}`}><RecipeBox cocktail={cocktail.strDrink} image={cocktail.strDrinkThumb} key={cocktail.idDrink} /></a>
             </SplideSlide>
           );
         })}

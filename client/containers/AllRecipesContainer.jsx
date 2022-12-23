@@ -28,6 +28,8 @@ const AllRecipesContainer = props => {
     };
   };
 
+
+
   return (
     <div className="allRecipesContainer">
       <h2 >All Cocktails by Name</h2>
@@ -38,10 +40,10 @@ const AllRecipesContainer = props => {
             
             //   <RecipeBox cocktail={cocktail.strDrink} image={cocktail.strDrinkThumb} key={cocktail.idDrink} />
             <div className="recipe">
-              
+              <a href={`http://localhost:8080/recipes/view/?recipeId=${cocktail.idDrink}`}>
               <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink}></img>
               <p><span>{cocktail.strDrink}</span></p>
-              
+              </a>
             </div>
           );
         })}

@@ -24,7 +24,8 @@ const App = (props) => {
           <Route path="/recipes/create" element={<RecipeForm />} />
           <Route path="/recipes/all" element={<AllRecipesContainer/>} />
           <Route path="/recipes/community" element={<CommunityRecipes/>} />
-          <Route path="/recipes/view" element={<RecipeView/>} />
+          <Route path="/recipes/view/" element={<RecipeView/>} />
+          <Route path="/recipes/pickone" element={<RecipeView/>} />
         </Routes>
       </BrowserRouter>
       <Footer />

@@ -297,14 +297,20 @@ input {
     background-color: darken($lightGrey,20%);
     box-shadow: 0 0 100px darken($lightBeige,50%);
     padding: 3rem 5rem;
-    margin: 1rem 5rem;
-    
+    margin: 1rem 15rem;
+    img {
+      object-fit: cover;
+      max-height: 300px;
+      width: 100%;
+      border-radius: 0.3rem;
+      filter:grayscale(60%);
+    }
     input{
       // box-sizing: border-box;
       flex:40%;
       border-radius: 0.3rem;
     }
-    form{
+    form {
       display: flex;
       flex-wrap: wrap;
     }
@@ -313,6 +319,9 @@ input {
       background-color: $darkBeige;
       color:$lightBeige;
     }
+    
+      
+    
   }
 }
 

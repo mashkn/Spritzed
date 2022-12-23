@@ -30,10 +30,12 @@ const HeaderMenu = props => {
           <GiSnowBottle />
           <h4>Christmas<br/>Cocktails</h4>
         </button>
+        <a href="http://localhost:8080/recipes/pickone">
         <button className="icon">
           <GiPerspectiveDiceSixFacesRandom />
           <h4>Pick One</h4>
         </button>
+        </a>
       </section>
       <section className='headerRight'>
         <a href="http://localhost:8080/recipes/create">
